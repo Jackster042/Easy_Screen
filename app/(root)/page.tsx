@@ -1,12 +1,14 @@
 import React from 'react'
+import Header from "@/components/Header";
 
 const Page = () => {
   return (
-    <div>
-      <h1 className={"text-2xl font-karla"}>
+    <main className={"wrapper page"}>
+        <Header  title={"All Videos "} subHeader={"Public Library"}/>
+        <h1 className={"text-2xl font-karla"}>
         Welcome to the Easy Screen!
-      </h1>
-    </div>
+        </h1>
+    </main>
   )
 }
 
