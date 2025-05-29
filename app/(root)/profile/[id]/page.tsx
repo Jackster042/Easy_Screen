@@ -1,24 +1,25 @@
 import React from "react";
 import Header from "@/components/Header";
+import { dummyCards } from "@/constants";
+import VideoCard from "@/components/VideoCard";
 
-const Page = async ({params}: ParamsWithSearch) => {
+const Page = async ({ params }: ParamsWithSearch) => {
+  const { id } = await params;
 
-    const { id } = await params;
-
-    return (
-        <div className={"wrapper page"}>
-            <Header
-            subHeader={"dzabammo@gmail.com"}
-            title={"Nemanja | SE7"}
-            userImg={"/assets/images/dummy.jpg"}
-            />
-            <h1 className={"font-karla text-2xl"}>
-
-
-            User ID : { id }
-            </h1>
-        </div>
-    )
-}
+  return (
+    <div className={"wrapper page"}>
+      <Header
+        subHeader={"dzabammo@gmail.com"}
+        title={"Nemanja | SE7"}
+        userImg={"/assets/images/dummy.jpg"}
+      />
+      <section className="video-grid">
+        {dummyCards.map((card) => (
+          <VideoCard key={card.id} {...card} />
+        ))}
+      </section>
+    </div>
+  );
+};
 
 export default Page;
