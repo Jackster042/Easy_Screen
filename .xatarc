@@ -1,0 +1,6 @@
+{
+  "databaseURL": "https://Nemanja-Stojanovic-s-workspace-ngb86i.eu-central-1.xata.sh/db/DB_TEST",
+  "codegen": {
+    "output": "src/xata.ts"
+  }
+}
